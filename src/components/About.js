@@ -73,7 +73,7 @@ function About() {
   return (
     <AboutContainer>
       <ImageContainer>
-        <Image src="/about.jpg" alt="Kanmani Ashok" />
+        <Image src={require("./about.jpg")} alt="Kanmani Ashok" />
       </ImageContainer>
       <ContentContainer>
         <Title>About</Title>
