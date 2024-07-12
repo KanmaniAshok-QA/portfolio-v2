@@ -79,16 +79,19 @@ function About() {
         <Title>About</Title>
         <TextContent>
           <p>
-            Hello, I'm <Highlight>Kanmani Ashok</Highlight>, a passionate <Highlight>Software Test Engineer</Highlight> with 8 years of experience in ensuring software quality for web and mobile applications.
+          In 2015, I stumbled into software testing, unaware it would lead me on a global adventure in tech. Today, I've got experience testing everything from websites to mobile apps, mastering manual, performance, and automation techniques along the way.
           </p>
           <p>
-            My journey has taken me from the bustling tech scene of Chennai to the innovative landscape of Munich, where I currently live. I'm passionate about <Highlight>quality assurance</Highlight> and <Highlight>software development</Highlight>, always striving to bridge the gap between these two crucial aspects of software creation.
+          My career has taken me from Chennai's vibrant tech hub to Munich's innovative scene. Each stop has added new skills to my professional toolkit, thanks to the diverse teams I've worked with.
           </p>
           <p>
-            I thrive in collaborative environments and enjoy working with diverse teams. Let's connect and explore opportunities to innovate together!
+          These days, I'm not just testing - I'm diving into coding and web development too. I love finding that sweet spot where thorough testing meets creative problem-solving. It's all about making software that not only works flawlessly but is built smartly and efficiently.
           </p>
           <p>
-            When I'm not coding or testing, you'll find me in the kitchen, channeling my creativity into making fresh pasta or exploring Munich with my family. I'm also tackling the exciting challenges of parenthood, which has taught me more about problem-solving than any software bug ever could!
+          When I'm not at work, I'm usually tinkering with personal coding projects. It's my way of keeping up with this fast-paced field and showing off my growing dev skills.
+          </p>
+          <p>
+          Away from the computer, you might find me in the kitchen whipping up fresh pasta or baking cakes. Or I could be out exploring Munich with my family - we're always finding new adventures in our adopted home. And let's not forget the daily challenges of parenthood. Turns out, raising kids has taught me more about problem-solving than any software bug ever could!
           </p>
         </TextContent>
       </ContentContainer>

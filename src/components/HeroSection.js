@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
+import { FaEnvelope } from 'react-icons/fa'; 
 import Typed from 'typed.js';
 
 const HeroContainer = styled.div`
@@ -43,9 +44,10 @@ const TypedWrapper = styled.span`
   font-weight: 500;
 `;
 
-const DownloadButton = styled.a`
+const ContactButton = styled.a`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -53,10 +55,12 @@ const DownloadButton = styled.a`
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 20px 2px 4px 2px;
+  margin: 20px 10px 4px 10px;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
+  width: 150px;
+  height: 30px;
 
   &:hover {
     background-color: white;
@@ -70,7 +74,15 @@ const DownloadButton = styled.a`
   @media (max-width: 480px) {
     padding: 8px 16px;
     font-size: 14px;
+    width: 160px;
+    height: 45px;
   }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const HeroSection = () => {
@@ -106,10 +118,16 @@ const HeroSection = () => {
           <span ref={typedRef}></span>
         </TypedWrapper>
       </Subtitle>
-      <DownloadButton href="/Resume.pdf" download="Resume.pdf">
-        <Download size={20} />
-        Download CV
-      </DownloadButton>
+      <ButtonContainer>
+        <ContactButton href="/Resume.pdf" download="Resume.pdf">
+          <Download size={20} />
+          Download CV
+        </ContactButton>
+        <ContactButton href="mailto:kanmaniashok818@gmail.com">
+          <FaEnvelope size={20} />
+          Write to me
+        </ContactButton>
+      </ButtonContainer>
     </HeroContainer>
   );
 };

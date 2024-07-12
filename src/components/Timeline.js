@@ -10,6 +10,7 @@ const TimelineContainer = styled.div`
 `;
 
 const TimelineItem = styled.div`
+  display: flex;
   padding: 20px 30px;
   position: relative;
   background: #112240;
@@ -18,37 +19,38 @@ const TimelineItem = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #ccd6f6;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -12.5px;
-    background-color: white;
-    border: 4px solid #64ffda;
-    top: 30px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
   @media (max-width: 600px) {
-    width: 100%;
+    flex-direction: column;
     padding-left: 30px;
     padding-right: 25px;
   }
 `;
 
-const TimelineDate = styled.span`
-  position: absolute;
-  top: 16px;
-  font-size: 12px;
-  font-weight: bold;
-  right: 20px;
-  color: #8892b0;
+const LogoContainer = styled.div`
+  flex: 0 0 100px;
+  margin-right: 20px;
 
   @media (max-width: 600px) {
-    top: 10px;
+    margin-bottom: 15px;
   }
+`;
+
+const Logo = styled.img`
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+`;
+
+const ContentContainer = styled.div`
+  flex: 1;
+`;
+
+const TimelineDate = styled.span`
+  font-size: 12px;
+  font-weight: bold;
+  color: #8892b0;
+  display: block;
+  margin-bottom: 10px;
 `;
 
 const TimelineTitle = styled.h3`
@@ -63,22 +65,19 @@ const TimelineDescription = styled.p`
   color: #8892b0;
 `;
 
-const TimelineImage = styled.img`
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 6px;
-`;
-
 const Timeline = ({ events }) => {
   return (
     <TimelineContainer>
       {events.map((event, index) => (
         <TimelineItem key={index}>
-          <TimelineDate>{event.date}</TimelineDate>
-          <TimelineTitle>{event.title}</TimelineTitle>
-          <TimelineDescription>{event.description}</TimelineDescription>
-          {event.image && <TimelineImage src={event.image} alt={event.title} />}
+          <LogoContainer>
+            <Logo src={event.logo} alt={`${event.company} logo`} />
+          </LogoContainer>
+          <ContentContainer>
+            <TimelineDate>{event.date}</TimelineDate>
+            <TimelineTitle>{event.title}</TimelineTitle>
+            <TimelineDescription>{event.description}</TimelineDescription>
+          </ContentContainer>
         </TimelineItem>
       ))}
     </TimelineContainer>

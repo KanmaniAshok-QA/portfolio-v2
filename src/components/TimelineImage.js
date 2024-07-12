@@ -9,6 +9,7 @@ const TimelineImageContainer = styled.div`
 const TimelineImg = styled.img`
   width: 100%;
   height: auto;
+  background-color: transparent;
   max-width: 800px;
 `;
 
