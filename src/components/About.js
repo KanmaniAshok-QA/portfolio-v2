@@ -56,18 +56,6 @@ const TextContent = styled.div`
   }
 `;
 
-const Highlight = styled.span`
-  color: #4FD1C5;
-  font-weight: 500;
-`;
-
-const Link = styled.a`
-  color: #4FD1C5;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 function About() {
   return (

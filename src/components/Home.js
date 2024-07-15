@@ -87,7 +87,7 @@ const BentoItem = styled.div`
 const SectionTitle = styled.h2`
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  color: #64ffda;
+  color: #ccd6f6;
 `;
 
 const SliderButton = styled.button`
@@ -140,8 +140,7 @@ function Home() {
         "Test planning",
         "Script creation",
         "Test execution & environment monitoring",
-        "Defect tracking & report analysis",
-        "Stakeholder and project management"
+        "Bug tracking & report analysis"
       ]
     },
     {

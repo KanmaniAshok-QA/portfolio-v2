@@ -146,7 +146,7 @@ function App() {
         </MainContent>
         <FooterContainer>
           <SocialLinks>
-            <a href="https://github.com/KanmaniAshok-QA" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/kanmaniashokqa" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/kanmaniashok/" target="_blank" rel="noopener noreferrer">

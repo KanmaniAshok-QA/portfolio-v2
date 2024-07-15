@@ -18,10 +18,10 @@ const HeroContainer = styled.div`
 
 const Title = styled(motion.h1)`
   font-weight: 200;
-  color: #64ffda;
+  color: #ccd6f6;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  font-size: 2.0rem;
+  font-size: 1.2rem;
 
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -85,6 +85,11 @@ const ButtonContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const Highlight = styled.span`
+  color: #64ffda;;
+  font-weight: 500;
+`;
+
 const HeroSection = () => {
   const typedRef = useRef(null);
 
@@ -105,21 +110,17 @@ const HeroSection = () => {
 
   return (
     <HeroContainer>
-      <Title
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Software Test Engineer
+      <Title>
+      Hello! 👋 I'm <Highlight>Kanmani Ashok </Highlight>and I elevate digital products through quality assurance and innovative testing solutions.
       </Title>
       <Subtitle>
-        I specialise in {''}
+        My expertise includes {''}
         <TypedWrapper>
           <span ref={typedRef}></span>
         </TypedWrapper>
       </Subtitle>
       <ButtonContainer>
-        <ContactButton href="/Resume.pdf" download="Resume.pdf">
+        <ContactButton href="/Resume.pdf" download="Kanmani-Ashok-QA-Resume.pdf">
           <Download size={20} />
           Download CV
         </ContactButton>

@@ -44,7 +44,7 @@ function Footer() {
         <SocialLink href="https://www.linkedin.com/in/kanmaniashok/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </SocialLink>
-        <SocialLink href="https://github.com/kanmaniashok" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://github.com/kanmaniashokqa" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </SocialLink>
       </SocialLinks>
