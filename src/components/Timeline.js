@@ -69,7 +69,7 @@ const TimelineTitle = styled.h3`
 const TimelineDescription = styled.ul`
   margin: 10px 0 0;
   color: #8892b0;
-  padding-left: 20px;
+  padding-left: 150px;
 `;
 
 const ToggleButton = styled.button`

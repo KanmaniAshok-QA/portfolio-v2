@@ -184,14 +184,14 @@ function Home() {
       date: '2018 - 2022',
       title: 'Senior Test Engineer',
       company:"Cognizant Technology Solutions, India",
-      description: 'Joined',
+      description: 'Testing Methods: Demonstrated proficiency in manual, performance and automated testing methodologies for cross-platform applications, catering to diverse project scales and ensuring quality. Improved test coverage by 15% through collaborative development of testing strategies with developers, ensuring project requirements were met. Automation: Adoption of automation frameworks across different SDLC phases, leading to a 20% reduction in release cycles.Agile: Operated under Agile and Scrum frameworks to complete releases and organized sprints. Mentored junior QA engineers and shared testing best practices.',
       logo: process.env.PUBLIC_URL + '/Cognizant.png',
     },
     {
       date: '2014 - 2018',
       title: 'Performance Test Analyst',
       company:"Hexaware Technologies Ltd., India",
-      description: 'My first job as a Software test engineer.',
+      description: 'Executed comprehensive functional and non-functional testing, covering system integration, performance, and regression testing on web and mobile platforms. API Testing: Leveraged API testing tools like Postman and SoapUI to effectively perform functional and non-functional testing of APIs. CI: Create and maintain CI pipelines using Jenkins for continuous testing. Performance Testing & Optimization: Spearheaded performance testing using Loadrunner, Jmeter tools, and profiling efforts, boosting system efficiency by addressing bottlenecks. Collaboration: Collaborated with development teams to identify and resolve software bugs.',
       logo: process.env.PUBLIC_URL + '/Hex.png',
     },
     {
