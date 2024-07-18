@@ -39,7 +39,7 @@ const ContentContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 700;
+  font-weight: 200;
   color: #ccd6f6;
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -48,10 +48,10 @@ const Title = styled.h1`
 
 const TextContent = styled.div`
   p {
-    font-weight: 300;
+    font-weight: 100;
     color: #ccd6f6;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
   }
 `;
@@ -64,22 +64,28 @@ function About() {
         <Image src={require("./about.jpg")} alt="Kanmani Ashok" />
       </ImageContainer>
       <ContentContainer>
-        <Title>About</Title>
+        <Title>🛠️ Crafting Quality: In Software and Life</Title>
         <TextContent>
           <p>
-          In 2015, I stumbled into software testing, unaware it would lead me on a global adventure in tech. Today, I've got experience testing everything from websites to mobile apps, mastering manual, performance, and automation techniques along the way.
+          I graduated with a Computer Science degree in 2013, ready to make my mark in the tech world. While my studies focused on software development, I found my calling in software testing and quality assurance.
           </p>
           <p>
-          My career has taken me from Chennai's vibrant tech hub to Munich's innovative scene. Each stop has added new skills to my professional toolkit, thanks to the diverse teams I've worked with.
+          🌍 Career Path: Starting in Chennai's vibrant tech hub, I've gained valuable experience working with diverse teams on cutting-edge projects. Now, I'm excited to bring my skills to Munich's innovative tech scene, actively seeking new opportunities to contribute and grow.
+          Manual testing, performance testing, test automation, web and mobile app testing, and software development form the core of my technical toolkit.
           </p>
           <p>
-          These days, I'm not just testing - I'm diving into coding and web development too. I love finding that sweet spot where thorough testing meets creative problem-solving. It's all about making software that not only works flawlessly but is built smartly and efficiently.
+          👨‍👩‍👦 Life's Little Detours:
+          In 2022, I embarked on an unexpected adventure: relocating to Munich with my family and taking on the role of primary caregiver for my son. 🌍✈️
+          This career intermission has been an eye-opening experience. Who knew that raising a child would sharpen my problem-solving skills more than any software bug ever could? 🧠
           </p>
           <p>
-          When I'm not at work, I'm usually tinkering with personal coding projects. It's my way of keeping up with this fast-paced field and showing off my growing dev skills.
+          🚀 Projects and Achievements: Over the years, I've tackled complex web applications, cutting-edge mobile apps, and performance-critical systems. Each project has brought new challenges and opportunities to expand my technical toolkit.
           </p>
           <p>
-          Away from the computer, you might find me in the kitchen whipping up fresh pasta or baking cakes. Or I could be out exploring Munich with my family - we're always finding new adventures in our adopted home. And let's not forget the daily challenges of parenthood. Turns out, raising kids has taught me more about problem-solving than any software bug ever could!
+          💻 Personal Projects: My passion for technology extends beyond my professional life. I've developed several personal projects that showcase my skills and creativity. I invite you to explore these projects in the dedicated section of my portfolio - they reflect my continuous learning and my ability to apply my skills to solve real-world problems.
+          </p>
+          <p>
+          I'm eager to apply these skills to innovative projects that push the boundaries of what's possible in technology.
           </p>
         </TextContent>
       </ContentContainer>

@@ -14,7 +14,7 @@ const ProjectsContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-weight: 300;
+  font-weight: 200;
   color: #ccd6f6;
   margin-bottom: 2rem;
   font-size: 1.5rem;
@@ -110,7 +110,7 @@ function Projects() {
 
   return (
     <ProjectsContainer>
-      <Title>Projects</Title>
+      <Title>🌟 Tech Showcase: My Coding Highlights</Title>
       <BentoBox>
         {projects.map(project => (
           <BentoItem key={project.id} href={project.link} target="_blank" rel="noopener noreferrer">
@@ -128,3 +128,5 @@ function Projects() {
 }
 
 export default Projects;
+
+
