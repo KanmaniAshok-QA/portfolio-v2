@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import HeroSection from './HeroSection';
@@ -29,7 +29,7 @@ const BentoBox = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -47,8 +47,8 @@ const BentoItem = styled.div`
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  height: 300px; // Fixed height
-  width: 250px; // Fixed width
+  height: 300px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -131,7 +131,9 @@ const SliderButton = styled.button`
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [totalSlides, setTotalSlides] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const bentoBoxRef = useRef(null);
 
   const skills = [
     {
@@ -204,34 +206,44 @@ function Home() {
   ];
   
 
-  useEffect(() => {
-    setTotalSlides(skills.length);
-  }, [skills]);
-
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev < totalSlides - 1 ? prev + 1 : prev));
+  const checkScrollability = () => {
+    if (bentoBoxRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = bentoBoxRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1); // -1 to account for potential rounding errors
+    }
   };
 
   useEffect(() => {
-    const bentoBox = document.querySelector('#bento-box');
-    if (bentoBox) {
-      bentoBox.scrollTo({
-        left: currentSlide * 250, // 250px is the width of each BentoItem
+    checkScrollability();
+    window.addEventListener('resize', checkScrollability);
+    return () => window.removeEventListener('resize', checkScrollability);
+  }, []);
+
+  const handleScroll = (direction) => {
+    if (bentoBoxRef.current) {
+      const scrollAmount = 250; // Width of each BentoItem
+      const newScrollLeft = bentoBoxRef.current.scrollLeft + (direction === 'next' ? scrollAmount : -scrollAmount);
+      
+      bentoBoxRef.current.scrollTo({
+        left: newScrollLeft,
         behavior: 'smooth'
       });
+
+      // Use setTimeout to check scrollability after the scroll animation completes
+      setTimeout(checkScrollability, 300);
     }
-  }, [currentSlide]);
+  };
+
+  const handlePrev = () => handleScroll('prev');
+  const handleNext = () => handleScroll('next');
 
   return (
     <HomeContainer>
       <HeroSection />
       <SectionTitle>My Skills</SectionTitle>
       <BentoBoxContainer>
-        <BentoBox id="bento-box">
+        <BentoBox ref={bentoBoxRef} onScroll={checkScrollability}>
           {skills.map((skillGroup, index) => (
             <BentoItem key={index}>
               <h3>{skillGroup.category}</h3>
@@ -243,15 +255,15 @@ function Home() {
             </BentoItem>
           ))}
         </BentoBox>
-        <SliderButton className="prev" onClick={handlePrev} disabled={currentSlide === 0}>
+        <SliderButton className="prev" onClick={handlePrev} disabled={!canScrollLeft}>
           <ChevronLeft size={24} />
         </SliderButton>
-        <SliderButton className="next" onClick={handleNext} disabled={currentSlide === totalSlides - 1}>
+        <SliderButton className="next" onClick={handleNext} disabled={!canScrollRight}>
           <ChevronRight size={24} />
         </SliderButton>
       </BentoBoxContainer>
       <SectionTitle>My Journey</SectionTitle>
-        <Timeline events={timelineEvents} />
+      <Timeline events={timelineEvents} />
     </HomeContainer>
   );
 }

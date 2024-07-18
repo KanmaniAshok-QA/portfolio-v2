@@ -23,9 +23,11 @@ const HeaderContainer = styled.header`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   font-size: 1.2rem;
   color: #ccd6f6;
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: #64ffda;
@@ -129,7 +131,7 @@ function App() {
     <Router>
       <AppContainer>
         <HeaderContainer>
-          <Logo>Kanmani Ashok</Logo>
+          <Logo to="/">Kanmani Ashok</Logo>
           <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
           <Nav isOpen={isMenuOpen}>
             <NavLinkWrapper to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLinkWrapper>

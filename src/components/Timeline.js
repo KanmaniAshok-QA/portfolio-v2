@@ -13,7 +13,7 @@ const TimelineContainer = styled.div`
 const TimelineItem = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 30px;
+  padding: 20px;
   position: relative;
   background: #112240;
   border-radius: 6px;
@@ -24,13 +24,14 @@ const TimelineItem = styled.div`
 
 const ItemHeader = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 `;
 
 const LogoContainer = styled.div`
-  flex: 0 0 100px;
-  width: 100px;
-  height: 100px;
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
   margin-right: 20px;
   display: flex;
   align-items: center;
@@ -49,6 +50,7 @@ const Logo = styled.img`
 
 const ContentContainer = styled.div`
   flex: 1;
+  min-width: 0; // Prevents content from overflowing on small screens
 `;
 
 const TimelineDate = styled.span`
@@ -56,7 +58,7 @@ const TimelineDate = styled.span`
   font-weight: bold;
   color: #8892b0;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
 const TimelineTitle = styled.h3`
@@ -64,12 +66,22 @@ const TimelineTitle = styled.h3`
   padding: 0;
   color: #64ffda;
   font-size: 1.2rem;
+  word-wrap: break-word;
 `;
 
 const TimelineDescription = styled.ul`
-  margin: 10px 0 0;
+  margin: 15px 0 0;
   color: #8892b0;
-  padding-left: 150px;
+  padding-left: 20px;
+  list-style-type: disc;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 15px;
+  }
 `;
 
 const ToggleButton = styled.button`
@@ -78,10 +90,14 @@ const ToggleButton = styled.button`
   color: #64ffda;
   cursor: pointer;
   font-size: 1.2rem;
-  margin-left: auto;
   padding: 5px;
   display: flex;
   align-items: center;
+  margin-left: auto;
+
+  @media (max-width: 600px) {
+    margin-top: 10px;
+  }
 `;
 
 const Timeline = ({ events }) => {
@@ -112,8 +128,8 @@ const Timeline = ({ events }) => {
           </ItemHeader>
           {expandedItems[index] && (
             <TimelineDescription>
-              {event.description.split('. ').map((point, i) => (
-                <li key={i}>{point}</li>
+              {event.description.split('. ').filter(point => point.trim()).map((point, i) => (
+                <li key={i}>{point.trim()}.</li>
               ))}
             </TimelineDescription>
           )}

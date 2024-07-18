@@ -15,9 +15,9 @@ const ProjectsContainer = styled.div`
 
 const Title = styled.h2`
   font-weight: 300;
-  color: #64ffda;
+  color: #ccd6f6;
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 
   @media (max-width: 768px) {
     font-size: 2rem;

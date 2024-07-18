@@ -40,16 +40,16 @@ const ContentContainer = styled.div`
 
 const Title = styled.h1`
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ccd6f6;
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
 const TextContent = styled.div`
   p {
     font-weight: 300;
-    color: #E2E8F0;
+    color: #ccd6f6;
     margin-bottom: 1rem;
     font-size: 1.1rem;
     line-height: 1.6;
