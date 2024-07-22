@@ -19,7 +19,7 @@ GitHub Pages for hosting
 
 ## To run this project locally:
 1.Clone the repository
-git clone https://github.com/yourusername/portfolio-website.git
+git clone https://github.com/kanmaniashokqa/portfolio-v2.git
 
 2.Navigate to the project directory
 cd portfolio-website
