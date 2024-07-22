@@ -21,19 +21,19 @@ GitHub Pages for hosting
 
 1.Clone the repository
 
-git clone https://github.com/kanmaniashokqa/portfolio-v2.git
+  git clone https://github.com/kanmaniashokqa/portfolio-v2.git
 
 2. Navigate to the project directory
 
-cd portfolio-website
+  cd portfolio-website
 
 3. Install dependencies
 
-npm install
+  npm install
 
 4.Start the development server
 
-npm start
+  npm start
 
 5.Open http://localhost:3000 to view it in your browser
 
