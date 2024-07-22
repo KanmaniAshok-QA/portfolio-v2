@@ -18,22 +18,17 @@ HTML5 & CSS3
 GitHub Pages for hosting
 
 ## To run this project locally:
-
 1.Clone the repository
+git clone https://github.com/yourusername/portfolio-website.git
 
-  git clone https://github.com/kanmaniashokqa/portfolio-v2.git
+2.Navigate to the project directory
+cd portfolio-website
 
-2. Navigate to the project directory
-
-  cd portfolio-website
-
-3. Install dependencies
-
-  npm install
+3.Install dependencies
+npm install
 
 4.Start the development server
-
-  npm start
+npm start
 
 5.Open http://localhost:3000 to view it in your browser
 
