@@ -168,16 +168,16 @@ function Projects() {
       id: 1,
       title: 'Personal Portfolio Website',
       description: 'Developed a responsive, cross-browser compatible, single-page portfolio website to showcase my professional journey, skills, and projects.',
-      tools: ['React', 'Styled-components', 'HTML5', 'CSS3', 'Github Pages'],
+      tools: ['React', 'Styled-components', 'HTML5', 'CSS3', 'git', 'Github Pages'],
       year: 2024,
       image: process.env.PUBLIC_URL + '/portfolio.jpg',
       link: 'https://github.com/kanmaniashokqa/portfolio-v2/tree/master'
     },
     {
       id: 2,
-      title: 'Cypress test suite with mochaawesome report',
-      description: 'TIn this project, automated few use cases for the Check24 website using Cypress with Mochawesome reporting. The test script chooses random tarrifs from providers and does a comparison Prerequisites.',
-      tools: ['JavaScript', 'HTML5', 'CSS3', 'Chrome API'],
+      title: 'Cypress test suite with mochawesome reporter',
+      description: 'Automated few use cases of the Check24 website using Cypress with Mochawesome reporting. The test script chooses random tarrifs from providers and does a comparison.',
+      tools: ['Cypress e2e', 'Mochawesome', 'Node.js', 'npm', 'git', 'GitHub'],
       year: 2024,
       image: process.env.PUBLIC_URL + '/project1.png',
       link: 'https://github.com/kanmaniashokqa/cypress-reports/blob/master/README.md'
