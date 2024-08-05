@@ -171,7 +171,7 @@ function Projects() {
       tools: ['React', 'Styled-components', 'HTML5', 'CSS3', 'git', 'Github Pages'],
       year: 2024,
       image: process.env.PUBLIC_URL + '/portfolio.jpg',
-      link: 'https://github.com/kanmaniashokqa/portfolio-v2/tree/master'
+      link: 'https://github.com/kanmaniashokqa/portfolio-v2'
     },
     {
       id: 2,
@@ -180,16 +180,16 @@ function Projects() {
       tools: ['Cypress e2e', 'Mochawesome', 'Node.js', 'npm', 'git', 'GitHub'],
       year: 2024,
       image: process.env.PUBLIC_URL + '/project1.png',
-      link: 'https://github.com/kanmaniashokqa/cypress-reports/blob/master/README.md'
+      link: 'https://github.com/kanmaniashokqa/cypress-reports'
     },
     {
       id: 3,
       title: 'UI performance testing for single page applications',
-      description: 'Implemented Google Lighthouse + Puppeteer for UI testing of a web application.',
-      tools: ['Google Lighthouse', 'Puppeteer', 'JavaScript', 'Node.js'],
-      year: 2021,
+      description: 'Audits a webpage with Google Lighthouse + Cypress and provides scores and recommendations related to performance, SEO, best practices, accessibility.',
+      tools: ['Google Lighthouse', 'Cypress', 'mochasweome reporter', 'Node.js', 'npm', 'git', 'GitHub'],
+      year: 2024,
       image: process.env.PUBLIC_URL + '/project2.png',
-      link: '#'
+      link: 'https://github.com/kanmaniashokqa/cypress-lighthouse/tree/master'
     }
   ];
 
